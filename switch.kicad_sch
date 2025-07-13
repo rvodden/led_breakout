@@ -444,6 +444,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25900"
+			(at 135.89 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "3bf477d9-ed8a-4505-a35a-c8b42744ae6f")
 		)
@@ -520,6 +529,15 @@
 		)
 		(property "Description" "Push button switch, generic, two pins"
 			(at 135.89 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C221680"
+			(at 135.89 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)

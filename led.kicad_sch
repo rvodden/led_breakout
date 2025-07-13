@@ -673,6 +673,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C25890"
+			(at 139.7 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b97174c5-4705-486c-be8b-6c521a67a970")
 		)
@@ -762,6 +771,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 152.4 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C25076"
 			(at 152.4 78.74 0)
 			(effects
 				(font
@@ -863,6 +881,15 @@
 			)
 		)
 		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
+			(at 149.86 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7420353"
 			(at 149.86 88.9 0)
 			(effects
 				(font
@@ -973,6 +1000,15 @@
 		)
 		(property "Sim.Pins" "1=K 2=A"
 			(at 152.4 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2286"
+			(at 152.4 71.12 90)
 			(effects
 				(font
 					(size 1.27 1.27)

@@ -36,3 +36,4 @@ Plot/
 production/
 
 *.zip
+*.lck
