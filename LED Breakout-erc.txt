@@ -1,0 +1,53 @@
+ERC report (2025-07-14T09:54:08+0000, Encoding UTF8)
+
+***** Sheet /
+[label_dangling]: Label not connected to anything
+    ; error
+    @(0.5461 mm, 0.5207 mm): Label 'IOB_0A'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(0.5461 mm, 0.5461 mm): Label 'IOB_6A'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(0.6731 mm, 0.4953 mm): Label 'IOB_20A'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(0.6731 mm, 0.5207 mm): Label 'IOB_18A'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(0.6731 mm, 0.5461 mm): Label 'IOB_16A'
+[label_dangling]: Label not connected to anything
+    ; error
+    @(0.6731 mm, 0.5715 mm): Label 'IOB_13B'
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(0.9906 mm, 0.7747 mm): Symbol #PWR01 Pin 1 [Power input, Line]
+[power_pin_not_driven]: Input Power pin not driven by any Output Power pins
+    ; error
+    @(0.9906 mm, 0.8763 mm): Symbol #PWR02 Pin 1 [Power input, Line]
+
+***** Sheet /LED0/
+
+***** Sheet /LED1/
+
+***** Sheet /LED2/
+
+***** Sheet /LED3/
+
+***** Sheet /LED4/
+
+***** Sheet /LED5/
+
+***** Sheet /LED6/
+
+***** Sheet /LED7/
+
+***** Sheet /SWITCH0/
+
+***** Sheet /SWITCH1/
+
+***** Sheet /SWITCH2/
+
+***** Sheet /SWITCH3/
+
+ ** ERC messages: 8  Errors 8  Warnings 0

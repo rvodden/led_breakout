@@ -1,0 +1,48 @@
+name: Production Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate-production-files:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Find KiCad files
+      id: find_files
+      run: |
+        echo "schematic=$(ls *.kicad_sch 2>/dev/null | head -1)" >> $GITHUB_OUTPUT
+        echo "pcb=$(ls *.kicad_pcb 2>/dev/null | head -1)" >> $GITHUB_OUTPUT
+    
+    - name: Generate production files
+      uses: INTI-CMNB/KiBot@v2_k8
+      with:
+        config: .kibot/production.kibot.yaml
+        dir: output
+        schema: ${{ steps.find_files.outputs.schematic }}
+        board: ${{ steps.find_files.outputs.pcb }}
+    
+    - name: Upload JLCPCB files
+      uses: actions/upload-artifact@v4
+      with:
+        name: jlcpcb-production-files
+        path: output/jlcpcb/
+    
+    - name: Generate Interactive BOM
+      uses: INTI-CMNB/KiBot@v2_k8
+      with:
+        config: .kibot/ibom.kibot.yaml
+        dir: ibom_output
+        board: ${{ steps.find_files.outputs.pcb }}
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./ibom_output
+        destination_dir: ibom

@@ -1,0 +1,29 @@
+kibot:
+  version: 1
+
+outputs:
+  - name: 'ibom'
+    comment: 'Interactive BOM'
+    type: 'ibom'
+    dir: ''
+    options:
+      output: 'index.html'
+      dark_mode: false
+      hide_pads: false
+      show_fabrication: false
+      hide_silkscreen: false
+      highlight_pin1: true
+      no_redraw_on_drag: false
+      board_rotation: 0
+      checkboxes: 'Sourced,Placed'
+      include_tracks: true
+      include_nets: true
+      sort_order: 'C,R,L,D,U,Y,X,F,SW,A,~,HS,CNN,J,P,NT,MH'
+      blacklist: 'DNP*'
+      no_blacklist_virtual: false
+      blacklist_empty_val: false
+      netlist_file: ''
+      extra_fields: 'LCSC'
+      normalize_field_case: true
+      name_format: 'Interactive BOM'
+      variant: ''

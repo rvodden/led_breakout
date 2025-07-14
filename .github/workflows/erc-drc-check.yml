@@ -1,0 +1,46 @@
+name: ERC/DRC Check
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+  issues: read
+  checks: write
+  pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  erc-drc-check:
+    runs-on: ubuntu-latest
+    container: ghcr.io/inti-cmnb/kicad9_auto_full:latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Run ERC
+      run: |
+        mkdir -p output
+        kibot -q --log output/kibot.log -c .kibot/erc-drc.kibot.yaml --schema "LED Breakout.kicad_sch" --board "LED Breakout.kicad_pcb" 2>&1 | python3 utils/kicad2xunit.py > output/erc_output.xml
+
+    - name: Upload results
+      uses: actions/upload-artifact@v4
+      if: (!cancelled())
+      with:
+        name: ERC_Output
+        path: output/
+
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action@v2
+      if: (!cancelled())
+      with:
+        files: |
+          output/erc_output.xml
+        
+        

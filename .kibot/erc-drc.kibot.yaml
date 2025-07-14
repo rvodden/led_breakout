@@ -1,0 +1,34 @@
+kibot:
+  version: 1
+
+preflight:
+  erc: true
+  drc: true
+  check_zone_fills: true
+
+outputs:
+  # Generate a report of ERC/DRC results
+  - name: report
+    comment: ERC/DRC report
+    type: report
+    dir: output
+    options:
+      template: full_svg
+      
+  # Generate PCB Print for review
+  - name: 'pcb_print'
+    comment: 'PCB print'
+    type: 'pcb_print'
+    dir: 'review'
+    options:
+      format: 'PDF'
+      pages:
+        - layers:
+          - layer: F.Cu
+          - layer: F.SilkS
+          sheet: 'Front copper and silkscreen'
+        - layers:
+          - layer: B.Cu
+          - layer: B.SilkS
+          mirror: true
+          sheet: 'Back copper and silkscreen'
