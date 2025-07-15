@@ -516,14 +516,7 @@
       "version": 4
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "+3.3V": [
-        "PWR"
-      ],
-      "GND": [
-        "PWR"
-      ]
-    },
+    "netclass_assignments": null,
     "netclass_patterns": [
       {
         "netclass": "Default",
