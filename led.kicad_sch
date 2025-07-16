@@ -623,7 +623,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 139.7 88.9 90)
+		(at 139.7 88.9 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -631,7 +631,7 @@
 		(dnp no)
 		(uuid "0cd1bdb3-aeca-42c5-b8ae-94b375621a79")
 		(property "Reference" "R1"
-			(at 139.446 86.36 90)
+			(at 139.954 91.44 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -639,7 +639,7 @@
 			)
 		)
 		(property "Value" "3K3"
-			(at 139.7 91.44 90)
+			(at 139.7 86.36 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -647,7 +647,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 139.7 90.678 90)
+			(at 139.7 87.122 90)
 			(effects
 				(font
 					(size 1.27 1.27)
