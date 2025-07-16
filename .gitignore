@@ -34,6 +34,7 @@ export-*
 3d/Render/*
 Plot/
 production/
+output/
 
 *.zip
 *.lck
